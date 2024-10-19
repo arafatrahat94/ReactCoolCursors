@@ -1,0 +1,77 @@
+{
+  "name": "react-nprogress-latest",
+  "version": "1.0.4",
+  "description": "A very simple, highly customisable react top progressbar component.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "babel": "babel index.js -d dist",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Arjun Sharma",
+    "url": "https://github.com/imarjunshrma"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.23.0",
+    "@babel/core": "^7.23.2",
+    "@babel/plugin-external-helpers": "^7.22.5",
+    "@babel/plugin-syntax-jsx": "^7.22.5",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-stage-1": "^7.8.3",
+    "@lopatnov/rollup-plugin-uglify": "^2.1.5",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "babel-preset-minify": "^0.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "styled-components": "^6.1.13",
+    "styled-jsx": "^5.1.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imarjunshrma/react-nprogress.git"
+  },
+  "homepage": "https://github.com/imarjunshrma/react-nprogress.git",
+  "keywords": [
+    "react component",
+    "react-loading",
+    "react-loader",
+    "animated loader",
+    "react youtube like loader",
+    "react",
+    "animated react loader",
+    "react-animated-loader",
+    "react-top-loader",
+    "react",
+    "reactjs",
+    "react-component",
+    "loading-bar",
+    "youtube-loading-bar",
+    "loading",
+    "react-loading-bar",
+    "redux-loading-bar",
+    "loading bar",
+    "smooth",
+    "animated",
+    "youtube loading bar",
+    "top loading bar",
+    "component"
+  ]
+}
