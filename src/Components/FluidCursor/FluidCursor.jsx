@@ -1,11 +1,7 @@
 import React, { useEffect } from "react";
 import "./FluidCursor.css";
 
-const FluidCursor = ({
-  cursorSize = 28,
-  cursorColor = "blue",
-  opacity = 1,
-}) => {
+const FluidCursor = ({ size = 28, color = "blue", opacity = 1 }) => {
   const TAIL_LENGTH = 20;
   let mouseX = 0;
   let mouseY = 0;
@@ -46,9 +42,9 @@ const FluidCursor = ({
         cursorCircles[i].style.transform = `translate(${current.x}px, ${
           current.y
         }px) scale(${i / TAIL_LENGTH})`;
-        cursorCircles[i].style.width = `${cursorSize}px`; // Set size
-        cursorCircles[i].style.height = `${cursorSize}px`; // Set size
-        cursorCircles[i].style.background = cursorColor; // Set color
+        cursorCircles[i].style.width = `${size}px`; // Set size
+        cursorCircles[i].style.height = `${size}px`; // Set size
+        cursorCircles[i].style.background = color; // Set color
         cursorCircles[i].style.opacity = opacity;
       }
       requestAnimationFrame(updateCursor);
@@ -62,13 +58,13 @@ const FluidCursor = ({
     return () => {
       document.removeEventListener("mousemove", onMouseMove);
     };
-  }, [cursorColor, cursorSize]); // Re-run effect if props change
+  }, [color, size]); // Re-run effect if props change
 
   return (
     <cursorCircles
       id="waveCursor"
-      cursorSize={cursorSize}
-      cursorColor={cursorColor}
+      size={size}
+      color={color}
       opacity={opacity}
     />
   );
