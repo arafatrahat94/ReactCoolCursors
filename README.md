@@ -14,10 +14,10 @@ npm install react-cool-cursors
 
 As `react-cool-cursors` expands, you can easily switch between different cursor styles. The current options are:
 
-| Cursor Style | Import Code                                          | Demo Button                |
-| ------------ | ---------------------------------------------------- | -------------------------- |
-| SimpleCursor | `import { SimpleCursor } from "react-cool-cursors";` | [View Demo](#simplecursor) |
-| FluidCursor  | `import { FluidCursor } from "react-cool-cursors";`  | [View Demo](#fluidcursor)  |
+| Cursor Style | Import Code                                          | Demo Button                                                                                     |
+| ------------ | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| SimpleCursor | `import { SimpleCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1YzL7JMAZRL1RJUr8iI2JRziZeHgVWguA/view?usp=sharing) |
+| FluidCursor  | `import { FluidCursor } from "react-cool-cursors";`  | [View Demo](https://drive.google.com/file/d/1SN6x7TZkIcrk5TYddm3BW0wsIlZtVEtE/view?usp=sharing) |
 
 ### Basic Usage
 
@@ -138,6 +138,38 @@ const App = () => {
 ## Conclusion
 
 `react-cool-cursors` provides an easy way to implement customizable cursors in your React applications. Enjoy smooth, interactive cursors that enhance user experience!
+
+# Contributions
+
+If you want to contribute to this project,fork the [repository](https://github.com/arafatrahat94/ReactCoolCursors) and clone it to your local machine. <br>
+Commit your changes and push your changes to your forked repository. <br>
+Finally, open a pull request with a detailed description of your changes. I highly appreciate any contributions.
+
+# Issues
+
+If you are facing any problem feel free to share [here](https://github.com//arafatrahat94/ReactCoolCursors/issues)
+
+<!-- # Our Community
+
+You can also post your problems in our community for any kind of support 👨‍💻<br>
+
+TechHelpBD is one of the best technology based knowledge sharing Community <br>
+► Like Our Facebook Page=>https://facebook.com/TechHelpBD <br>
+► Join Our Facebook Group=>https://facebook.com/groups/TechHelpBangladesh <br>
+► Join Our Telegram Group=>https://t.me/TechHelpBangladesh <br>
+► Join Our Discord Server=>https://discord.gg/FFyVXZze4F <br>
+► Join Our Whatsapp Group=>https://chat.whatsapp.com/KsnXhnqsG9g3lxXE6nMheE <br>
+► Subscribe Our YouTube Channel=>https://youtube.com/TechHelpBangladesh <br>
+🌐Our Official Website: https://TechHelpBD.com <br>
+
+We recommend you to post your problems on our Facebook group and Github repo issues section first to get early response.
+ -->
+
+# Contact Me
+
+❒ [Gmail](mailto:arafatrahat94@gmail.com) <br>
+❒ [WhatsApp](https://wa.me/+8801980389400) <br>
+❒ [Linkedin](https://www.linkedin.com/in/MdArafathHossain)
 
 ## License
 
