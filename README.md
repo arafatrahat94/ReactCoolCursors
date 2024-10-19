@@ -4,20 +4,20 @@ A simple npm package for React that offers smooth, customizable cursors.
 
 ## Installation
 
-You can install `ReactCoolCursors` using npm:
+You can install `react-cool-cursors` using npm:
 
 ```bash
-npm install ReactCoolCursors
+npm install react-cool-cursors
 ```
 
 ## Cursor Styles
 
-As `ReactCoolCursors` expands, you can easily switch between different cursor styles. The current options are:
+As `react-cool-cursors` expands, you can easily switch between different cursor styles. The current options are:
 
-| Cursor Style | Import Code                                        | Demo Button                |
-| ------------ | -------------------------------------------------- | -------------------------- |
-| SimpleCursor | `import { SimpleCursor } from "ReactCoolCursors";` | [View Demo](#simplecursor) |
-| FluidCursor  | `import { FluidCursor } from "ReactCoolCursors";`  | [View Demo](#fluidcursor)  |
+| Cursor Style | Import Code                                          | Demo Button                |
+| ------------ | ---------------------------------------------------- | -------------------------- |
+| SimpleCursor | `import { SimpleCursor } from "react-cool-cursors";` | [View Demo](#simplecursor) |
+| FluidCursor  | `import { FluidCursor } from "react-cool-cursors";`  | [View Demo](#fluidcursor)  |
 
 ### Basic Usage
 
@@ -26,8 +26,8 @@ To use the cursors from the library, follow these steps:
 1. **Import the Component**: In your main file (e.g., `App.js` or `index.js`), add the following imports:
 
 ```javascript
-import { SimpleCursor } from "ReactCoolCursors"; // or FluidCursor
-import "ReactCoolCursors/dist/style.css";
+import { SimpleCursor } from "react-cool-cursors"; // or FluidCursor
+import "react-cool-cursors/dist/style.css";
 ```
 
 2. **Add the Cursor Component**: Place the desired cursor component in your render method:
@@ -52,8 +52,8 @@ Here’s an example of how to use the SimpleCursor:
 
 ```javascript
 import React from "react";
-import { SimpleCursor } from "ReactCoolCursors";
-import "ReactCoolCursors/dist/style.css";
+import { SimpleCursor } from "react-cool-cursors";
+import "react-cool-cursors/dist/style.css";
 
 const App = () => {
   return (
@@ -72,7 +72,7 @@ export default App;
 In addition to the SimpleCursor, you can use the FluidCursor for a more dynamic effect. To use the FluidCursor, simply replace the import statement:
 
 ```javascript
-import { FluidCursor } from "ReactCoolCursors";
+import { FluidCursor } from "react-cool-cursors";
 ```
 
 ### Usage
@@ -89,8 +89,8 @@ Here’s an example of how to use the FluidCursor:
 
 ```javascript
 import React from "react";
-import { FluidCursor } from "ReactCoolCursors";
-import "ReactCoolCursors/dist/style.css";
+import { FluidCursor } from "react-cool-cursors";
+import "react-cool-cursors/dist/style.css";
 
 const App = () => {
   return (
@@ -109,7 +109,7 @@ export default App;
 To change the cursor style in the future, simply import the desired cursor component:
 
 ```javascript
-import { [NewCursorStyle] } from "ReactCoolCursors";
+import { [NewCursorStyle] } from "react-cool-cursors";
 ```
 
 Then use it in your component:
@@ -123,7 +123,7 @@ Then use it in your component:
 For instance, if a new cursor style called `SparkleCursor` is added:
 
 ```javascript
-import { SparkleCursor } from "ReactCoolCursors";
+import { SparkleCursor } from "react-cool-cursors";
 
 const App = () => {
   return (
@@ -137,7 +137,7 @@ const App = () => {
 
 ## Conclusion
 
-`ReactCoolCursors` provides an easy way to implement customizable cursors in your React applications. Enjoy smooth, interactive cursors that enhance user experience!
+`react-cool-cursors` provides an easy way to implement customizable cursors in your React applications. Enjoy smooth, interactive cursors that enhance user experience!
 
 ## License
 

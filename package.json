@@ -1,5 +1,5 @@
 {
-  "name": "ReactCoolCursors",
+  "name": "react-cool-cursors",
   "version": "1.0.3",
   "description": "A very simple npm package for react,offering smooth,many customisable cursors.",
   "main": "dist/index.js",
