@@ -35,7 +35,7 @@ import "ReactCoolCursors/dist/style.css";
 ```javascript
 <SimpleCursor size={30} color="black" opacity={1} />
 // or
-<FluidCursor cursorSize={28} cursorColor="blue" />
+<FluidCursor size={28} color="blue" opacity={1} />
 ```
 
 ### Customization
@@ -80,7 +80,7 @@ import { FluidCursor } from "ReactCoolCursors";
 You can use the FluidCursor similarly:
 
 ```javascript
-<FluidCursor cursorSize={28} cursorColor="blue" />
+<FluidCursor cursorSize={28} cursorColor="blue" opacity={1} />
 ```
 
 ### Example
@@ -95,7 +95,7 @@ import "ReactCoolCursors/dist/style.css";
 const App = () => {
   return (
     <div>
-      <FluidCursor cursorSize={28} cursorColor="blue" />
+      <FluidCursor cursorSize={28} cursorColor="blue" opacity={1} />
       {/* Your other components */}
     </div>
   );
@@ -115,7 +115,7 @@ import { [NewCursorStyle] } from "ReactCoolCursors";
 Then use it in your component:
 
 ```javascript
-<NewCursorStyle size={30} color="red" />
+<NewCursorStyle size={30} color="red" opacity={1} />
 ```
 
 ### Example of Changing Styles
@@ -128,7 +128,7 @@ import { SparkleCursor } from "ReactCoolCursors";
 const App = () => {
   return (
     <div>
-      <SparkleCursor size={35} color="pink" />
+      <SparkleCursor size={35} color="pink" opacity={1} />
       {/* Your other components */}
     </div>
   );

@@ -1,11 +1,16 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
-
+import "./SimpleCursor.css";
 const Cursor = styled.div`
   display: block;
+  overflow: hidden;
+
   width: ${({ size }) => size}px;
   height: ${({ size }) => size}px;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
   border-radius: 50%;
   background: ${({ color }) => color};
   pointer-events: none;

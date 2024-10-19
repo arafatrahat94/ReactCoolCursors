@@ -1,11 +1,12 @@
 :root {
   --cursor-size: 28px;
-  --bg: #faf7ee;
 }
 
 #waveCursor {
+  z-index: 1000;
   position: fixed;
-  top: -30px;
+  top: -10px;
+  /* bottom: -30px; */
   left: calc(var(--cursor-size) * -0.5);
   pointer-events: none;
   filter: url(#goo);
