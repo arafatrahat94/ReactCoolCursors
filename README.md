@@ -1,111 +1,146 @@
-# NProgress
+# ReactCoolCursors
 
-A very simple, highly customisable react top progressbar component.
+A simple npm package for React that offers smooth, customizable cursors.
 
 ## Installation
 
-Install react-nprogress-latest with npm
+You can install `ReactCoolCursors` using npm:
 
 ```bash
-  npm i react-nprogress-latest
+npm install ReactCoolCursors
 ```
 
-## Basic usage
+## Cursor Styles
 
-To use your library for routing change or as a top progress bar, follow these steps:
+As `ReactCoolCursors` expands, you can easily switch between different cursor styles. The current options are:
 
-1. **For Route Change:**
-   If you want to use your library for route changes, you should import it inside your `App.js` file.
+| Cursor Style | Import Code                                        | Demo Button                |
+| ------------ | -------------------------------------------------- | -------------------------- |
+| SimpleCursor | `import { SimpleCursor } from "ReactCoolCursors";` | [View Demo](#simplecursor) |
+| FluidCursor  | `import { FluidCursor } from "ReactCoolCursors";`  | [View Demo](#fluidcursor)  |
+
+### Basic Usage
+
+To use the cursors from the library, follow these steps:
+
+1. **Import the Component**: In your main file (e.g., `App.js` or `index.js`), add the following imports:
 
 ```javascript
-import NProgress from "react-nprogress-latest";
-import "react-nprogress-latest/dist/style.css";
-function App() {
-  return <NProgress options={{ OnRouteChange: true }} />;
-}
+import { SimpleCursor } from "ReactCoolCursors"; // or FluidCursor
+import "ReactCoolCursors/dist/style.css";
 ```
 
-#### `delayMs` (default: `600ms`)
-
-The `delayMs` prop determines the delay in milliseconds before NProgress completes. This value influences the speed of progress completion when the component is triggered. A higher value for `delayMs` results in a slower progression, while a lower value speeds up the completion.
-
-```js
-<NProgress delayMs={800} options={{ OnRouteChange: true }} />
-```
-
-2. **As Top Progress Bar:**
-   To use your library as a top progress bar in any part of your application, you can import it anywhere in your code where you want it to appear.(Recommended->Header)
+2. **Add the Cursor Component**: Place the desired cursor component in your render method:
 
 ```javascript
-import NProgress from "react-nprogress-latest";
-import "react-nprogress-latest/dist/style.css";
-function App() {
-  return <NProgress options={{ onSectionScroll: true }} />;
-}
+<SimpleCursor size={30} color="black" opacity={1} />
+// or
+<FluidCursor cursorSize={28} cursorColor="blue" />
 ```
 
-#### `steps` (default: `9`)
+### Customization
 
-The `steps` prop determines the number of steps for progress completion when the component is triggered. The value of `steps` should not exceed 9, as the calculation (`steps * 0.1`) must not result in a value greater than 1, causing the NProgress to disappear.
+You can customize the cursor's appearance by modifying the following props for both cursor styles:
 
-```js
-<NProgress steps={8} options={{ onRouteChange: true }} />
+- `size` / `cursorSize`: Set the size of the cursor (e.g., `size={30}` or `cursorSize={28}`).
+- `color` / `cursorColor`: Change the cursor color (e.g., `color="black"` or `cursorColor="blue"`).
+- `opacity`: Adjust the cursor's opacity (e.g., `opacity={1}`).
+
+### Example
+
+Here’s an example of how to use the SimpleCursor:
+
+```javascript
+import React from "react";
+import { SimpleCursor } from "ReactCoolCursors";
+import "ReactCoolCursors/dist/style.css";
+
+const App = () => {
+  return (
+    <div>
+      <SimpleCursor size={30} color="black" opacity={1} />
+      {/* Your other components */}
+    </div>
+  );
+};
+
+export default App;
 ```
 
-## Configuration
+## Fluid Cursor
 
-#### `minimum` (default: `0.08`)
+In addition to the SimpleCursor, you can use the FluidCursor for a more dynamic effect. To use the FluidCursor, simply replace the import statement:
 
-Changes the minimum percentage used upon starting.
-
-```js
-<NProgress configure={{ minimum: 0.1 }} />
+```javascript
+import { FluidCursor } from "ReactCoolCursors";
 ```
 
-#### `template`
+### Usage
 
-You can change the markup using the template option. To keep the progress bar working, make sure to include an element with role='bar' in the [template].
+You can use the FluidCursor similarly:
 
-```js
-<NProgress configure={{ template: "<div class='....'>...</div>" }} />
+```javascript
+<FluidCursor cursorSize={28} cursorColor="blue" />
 ```
 
-#### `easing` and `speed` (default: `ease` and `200`)
+### Example
 
-Adjust animation settings using the easing option (a CSS easing string) and the speed option (in milliseconds).If you are using the options prop, it is recommended not to use the speed option independently.
+Here’s an example of how to use the FluidCursor:
 
-```js
-<NProgress configure={{ easing: "ease", speed: 500 }} />
+```javascript
+import React from "react";
+import { FluidCursor } from "ReactCoolCursors";
+import "ReactCoolCursors/dist/style.css";
+
+const App = () => {
+  return (
+    <div>
+      <FluidCursor cursorSize={28} cursorColor="blue" />
+      {/* Your other components */}
+    </div>
+  );
+};
+
+export default App;
 ```
 
-#### `trickle` (default: `true`)
+## Changing Cursor Styles
 
-Turn off the automatic incrementing behavior by setting the trickle option to `false`. If you are using the options prop, it is recommended not to use the trickle option independently.
+To change the cursor style in the future, simply import the desired cursor component:
 
-```js
-<NProgress configure({ trickle: false })/>
+```javascript
+import { [NewCursorStyle] } from "ReactCoolCursors";
 ```
 
-#### `trickleSpeed`
+Then use it in your component:
 
-Adjust how often to trickle/increment, in milliseconds.If you are using the options prop, it is recommended not to use the trickleSpeed option independently.
-
-```js
-<NProgress configure={{ trickleSpeed: 200 }} />
+```javascript
+<NewCursorStyle size={30} color="red" />
 ```
 
-#### `showSpinner` (default: `true`)
+### Example of Changing Styles
 
-Turn off loading spinner by setting it to false.
+For instance, if a new cursor style called `SparkleCursor` is added:
 
-```js
-<NProgress configure={{ showSpinner: false }} />
+```javascript
+import { SparkleCursor } from "ReactCoolCursors";
+
+const App = () => {
+  return (
+    <div>
+      <SparkleCursor size={35} color="pink" />
+      {/* Your other components */}
+    </div>
+  );
+};
 ```
 
-#### `parent` (default: `body`)
+## Conclusion
 
-Specify this option to change the parent container.
+`ReactCoolCursors` provides an easy way to implement customizable cursors in your React applications. Enjoy smooth, interactive cursors that enhance user experience!
 
-```js
-<NProgress configure={{ parent: "#container" }} />
-```
+## License
+
+This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
+
+![License](https://img.shields.io/badge/license-Apache%202.0-brightgreen.svg)
