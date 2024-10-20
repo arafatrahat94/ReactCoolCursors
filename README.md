@@ -1,7 +1,3 @@
-Here's the complete documentation for your `react-cool-cursors` package, now including detailed customization options for the border:
-
----
-
 # ReactCoolCursors
 
 A simple npm package for React that offers smooth, customizable cursors.
