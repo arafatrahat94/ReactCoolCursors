@@ -1,17 +1,29 @@
 import React, { useEffect } from "react";
 import "./FluidCursor.css";
 
-const FluidCursor = ({ size = 28, color = "blue", opacity = 1 }) => {
+interface FluidCursorProps {
+  size?: number;
+  color?: string;
+  opacity?: number;
+  border?: string;
+}
+
+const FluidCursor: React.FC<FluidCursorProps> = ({
+  size = 28,
+  color = "black",
+  opacity = 1,
+  border = "none",
+}) => {
   const TAIL_LENGTH = 20;
   let mouseX = 0;
   let mouseY = 0;
-  let cursorCircles = [];
-  let cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
+  const cursorCircles: HTMLDivElement[] = [];
+  const cursorHistory = Array(TAIL_LENGTH).fill({ x: 0, y: 0 });
 
   useEffect(() => {
-    const cursor = document.getElementById("waveCursor");
+    const cursor = document.getElementById("waveCursor") as HTMLDivElement;
 
-    function onMouseMove(event) {
+    function onMouseMove(event: MouseEvent) {
       mouseX = event.clientX;
       mouseY = event.clientY;
     }
@@ -33,8 +45,8 @@ const FluidCursor = ({ size = 28, color = "blue", opacity = 1 }) => {
         let current = cursorHistory[i];
         let next = cursorHistory[i + 1] || cursorHistory[TAIL_LENGTH - 1];
 
-        let xDiff = next.x - current.x;
-        let yDiff = next.y - current.y;
+        const xDiff = next.x - current.x;
+        const yDiff = next.y - current.y;
 
         current.x += xDiff * 0.35;
         current.y += yDiff * 0.35;
@@ -45,7 +57,8 @@ const FluidCursor = ({ size = 28, color = "blue", opacity = 1 }) => {
         cursorCircles[i].style.width = `${size}px`; // Set size
         cursorCircles[i].style.height = `${size}px`; // Set size
         cursorCircles[i].style.background = color; // Set color
-        cursorCircles[i].style.opacity = opacity;
+        cursorCircles[i].style.opacity = opacity.toString();
+        cursorCircles[i].style.border = border.toString();
       }
       requestAnimationFrame(updateCursor);
     }
@@ -60,14 +73,7 @@ const FluidCursor = ({ size = 28, color = "blue", opacity = 1 }) => {
     };
   }, [color, size]); // Re-run effect if props change
 
-  return (
-    <cursorCircles
-      id="waveCursor"
-      size={size}
-      color={color}
-      opacity={opacity}
-    />
-  );
+  return <div id="waveCursor" />;
 };
 
 export default FluidCursor;

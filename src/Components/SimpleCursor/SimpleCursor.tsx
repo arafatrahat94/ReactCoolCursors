@@ -1,7 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import "./SimpleCursor.css";
-const Cursor = styled.div`
+
+interface SimpleCursorProps {
+  size?: number;
+  color?: string;
+  opacity?: number;
+  border?: string;
+}
+
+const Cursor = styled.div<{
+  size: number;
+  color: string;
+  opacity: number;
+  border: string;
+}>`
   display: block;
   overflow: hidden;
 
@@ -15,19 +28,21 @@ const Cursor = styled.div`
   background: ${({ color }) => color};
   pointer-events: none;
   z-index: 1000;
+  border: ${({ border }) => border};
   transition: all 0.2s ease-out;
   animation: moveCursor1 0.5s infinite alternate;
   opacity: ${({ opacity }) => opacity};
+
   &.expand {
     background: transparent;
     animation: moveCursor2 0.5s forwards;
-    border: 1px solid #000;
+    border: ${({ border }) => border};
   }
+
   @keyframes moveCursor1 {
     from {
       transform: scale(1);
     }
-
     to {
       transform: scale(0.8);
     }
@@ -37,26 +52,28 @@ const Cursor = styled.div`
     0% {
       transform: scale(1);
     }
-
     50% {
       transform: scale(2);
     }
-
     100% {
       transform: scale(1);
       opacity: 0;
     }
-  }
 `;
 
-const SimpleCursor = ({ size = 20, color = "transparent", opacity = 1 }) => {
-  const cursorRef = useRef(null);
+const SimpleCursor: React.FC<SimpleCursorProps> = ({
+  size = 20,
+  color = "transparent",
+  opacity = 1,
+  border = "1px solid black",
+}) => {
+  const cursorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const cursor = cursorRef.current;
     if (!cursor) return;
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: MouseEvent) => {
       cursor.setAttribute(
         "style",
         `top: ${e.pageY - size / 2}px; left: ${e.pageX - size / 2}px;`
@@ -85,7 +102,8 @@ const SimpleCursor = ({ size = 20, color = "transparent", opacity = 1 }) => {
       size={size}
       color={color}
       opacity={opacity}
-    ></Cursor>
+      border={border}
+    />
   );
 };
 
