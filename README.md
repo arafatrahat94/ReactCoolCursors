@@ -75,7 +75,15 @@ const App = () => {
 export default App;
 ```
 
-Feel free to integrate this table into your documentation!
+## Disable default cursor showing
+
+You can disable the default cursor by adding the following css into `index.css` file:
+
+```
+body{
+  cursor:none
+}
+```
 
 ## Changing Cursor Types
 
