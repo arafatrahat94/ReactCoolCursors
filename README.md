@@ -168,6 +168,24 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 ❒ [FaceBook](https://www.facebook.com/md.arafathhossainrahat)<br>
 ❒ [Telegram](https://t.me/ArafathSensei94)
 
+## Todo
+
+```
+- Add method to control transition time.
+- Add magic color effect on cursor move.
+- Add click style effect on cursor click.
+- Add Circle Dot cursor style.
+- Add Emoji cursor style.
+- Add Fire cursor style.
+- Add Custom cursor style.
+- Add Bubble effect while cursor moving.
+- Add Small dot cursor style.
+- Add Neon cursor style.
+- Add Ripple effect cursor moving.
+- Add Snake effect cursor moving.
+- Add Packman cursor style.
+```
+
 ## License
 
 This project is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
