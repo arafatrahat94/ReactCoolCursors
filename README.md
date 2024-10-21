@@ -33,23 +33,25 @@ import "react-cool-cursors/dist/style.css";
 2. **Add the Cursor Component**: Place the desired cursor component in your render method:
 
 ```javascript
-<SimpleCursor size={30} color="black" opacity={1} border="1px solid black" />
+<SimpleCursor />
 // or
-<FluidCursor size={28} color="blue" opacity={1} border="2px dashed red" />
+<FluidCursor />
 ```
 
 ### Customization
 
-You can customize the cursor's appearance by modifying the following props for both cursor styles:
+You can customize the cursor's appearance using the following attributes:
 
-- `size` / `cursorSize`: Set the size of the cursor (e.g., `size={30}` or `cursorSize={28}`).
-- `color` / `cursorColor`: Change the cursor color (e.g., `color="black"` or `cursorColor="blue"`).
-- `opacity`: Adjust the cursor's opacity (e.g., `opacity={1}`).
-- `border`: Set the cursor's border using CSS syntax (e.g., `border="1px solid black"`).
+| Attribute | Description                              | Default Value |
+| --------- | ---------------------------------------- | ------------- |
+| `size`    | Set the size of the cursor               | `30`          |
+| `color`   | Change the cursor color                  | `black`       |
+| `opacity` | Adjust the cursor's opacity              | `1`           |
+| `border`  | Set the cursor's border using CSS syntax | `none`        |
 
 ### Example
 
-Here’s an example of how to use the SimpleCursor with a custom border:
+Here’s an example of how to use the SimpleCursor with a custom styling:
 
 ```javascript
 import React from "react";
@@ -61,9 +63,9 @@ const App = () => {
     <div>
       <SimpleCursor
         size={30}
-        color="black"
-        opacity={1}
-        border="1px solid black"
+        color="red"
+        opacity={0.5}
+        border="1px dotted blue"
       />
       {/* Your other components */}
     </div>
@@ -73,43 +75,11 @@ const App = () => {
 export default App;
 ```
 
-### Fluid Cursor
+Feel free to integrate this table into your documentation!
 
-In addition to the SimpleCursor, you can use the FluidCursor for a more dynamic effect. To use the FluidCursor, simply replace the import statement:
+## Changing Cursor Types
 
-```javascript
-import { FluidCursor } from "react-cool-cursors";
-```
-
-#### Usage Example
-
-Here’s how to use the FluidCursor with customization:
-
-```javascript
-import React from "react";
-import { FluidCursor } from "react-cool-cursors";
-import "react-cool-cursors/dist/style.css";
-
-const App = () => {
-  return (
-    <div>
-      <FluidCursor
-        cursorSize={28}
-        cursorColor="blue"
-        opacity={1}
-        border="2px dashed red"
-      />
-      {/* Your other components */}
-    </div>
-  );
-};
-
-export default App;
-```
-
-## Changing Cursor Styles
-
-To change the cursor style in the future, simply import the desired cursor component:
+To change the cursor type in the future, simply import the desired cursor component:
 
 ```javascript
 import { [NewCursorStyle] } from "react-cool-cursors";
@@ -121,9 +91,9 @@ Then use it in your component:
 <NewCursorStyle size={30} color="red" opacity={1} border="1px solid green" />
 ```
 
-### Example of Changing Styles
+### Example of Changing Type
 
-For instance, if a new cursor style called `SparkleCursor` is added:
+For instance, if a new cursor Type called `SparkleCursor` is added:
 
 ```javascript
 import { SparkleCursor } from "react-cool-cursors";
@@ -149,7 +119,7 @@ const App = () => {
 
 ## Contributions
 
-If you want to contribute to this project, fork the [repository](https://github.com/arafatrahat94/ReactCoolCursors) and clone it to your local machine. Commit your changes and push your changes to your forked repository. Finally, open a pull request with a detailed description of your changes. I highly appreciate any contributions.
+If you want to contribute to this project, fork the [repository](https://github.com/arafatrahat94/ReactCoolCursors) and clone it to your local machine. Commit your changes and push your changes to your forked repository. Finally, open a pull request with a detailed description of your changes to the dev branch.I highly appreciate any contributions.
 
 ## Issues
 
@@ -181,13 +151,22 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Added Border Styling Method.
 - Improved codes for Typescript.
 - Made sure the component works on both typescript and javascript.
+
+### [1.1.2] - 2024-10-20
+- Issue fixed with cursor positioning on fluid cursor.
+
+### [1.1.3] - 2024-10-21
+- Readme Instruction improved.
+- Code optimization done.
 ```
 
 # Contact Me
 
 ❒ [Gmail](mailto:arafatrahat94@gmail.com) <br>
 ❒ [WhatsApp](https://wa.me/+8801980389400) <br>
-❒ [Linkedin](https://www.linkedin.com/in/MdArafathHossain)
+❒ [Linkedin](https://www.linkedin.com/in/MdArafathHossain)<br>
+❒ [FaceBook](https://www.facebook.com/md.arafathhossainrahat)<br>
+❒ [Telegram](https://t.me/ArafathSensei94)
 
 ## License
 

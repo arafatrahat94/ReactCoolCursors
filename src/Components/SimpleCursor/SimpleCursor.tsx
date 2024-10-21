@@ -63,7 +63,7 @@ const Cursor = styled.div<{
 
 const SimpleCursor: React.FC<SimpleCursorProps> = ({
   size = 20,
-  color = "transparent",
+  color = "black",
   opacity = 1,
   border = "1px solid black",
 }) => {
