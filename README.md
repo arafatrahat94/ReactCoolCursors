@@ -166,6 +166,10 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 ### [1.1.3] - 2024-10-21
 - Readme Instruction improved.
 - Code optimization done.
+
+### [1.1.4] - 2024-10-25
+- Todo added.
+- Fluid cursor design improved.
 ```
 
 # Contact Me
