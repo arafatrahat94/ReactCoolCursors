@@ -42,12 +42,13 @@ import "react-cool-cursors/dist/style.css";
 
 You can customize the cursor's appearance using the following attributes:
 
-| Attribute | Description                              | Default Value |
-| --------- | ---------------------------------------- | ------------- |
-| `size`    | Set the size of the cursor               | `30`          |
-| `color`   | Change the cursor color                  | `black`       |
-| `opacity` | Adjust the cursor's opacity              | `1`           |
-| `border`  | Set the cursor's border using CSS syntax | `none`        |
+| Attribute        | Description                                                     | Default Value |
+| ---------------- | --------------------------------------------------------------- | ------------- |
+| `size`           | Set the size of the cursor                                      | `30`          |
+| `color`          | Change the cursor color                                         | `black`       |
+| `opacity`        | Adjust the cursor's opacity                                     | `1`           |
+| `border`         | Set the cursor's border using CSS syntax                        | `none`        |
+| `TransitionTime` | Set the cursor's transition time using number values in seconds | `0.2`         |
 
 ### Example
 
@@ -66,6 +67,7 @@ const App = () => {
         color="red"
         opacity={0.5}
         border="1px dotted blue"
+        TransitionTime={0.5}
       />
       {/* Your other components */}
     </div>
@@ -96,7 +98,13 @@ import { [NewCursorStyle] } from "react-cool-cursors";
 Then use it in your component:
 
 ```javascript
-<NewCursorStyle size={30} color="red" opacity={1} border="1px solid green" />
+<NewCursorStyle
+  size={30}
+  color="red"
+  opacity={1}
+  border="1px solid green"
+  TransitionTime={0.5}
+/>
 ```
 
 ### Example of Changing Type
@@ -114,6 +122,7 @@ const App = () => {
         color="pink"
         opacity={1}
         border="3px dotted purple"
+        TransitionTime={0.5}
       />
       {/* Your other components */}
     </div>
@@ -169,6 +178,7 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 
 ### [1.1.4] - 2024-10-25
 - Todo added.
+- Transition time control attribute added.
 - Fluid cursor design improved.
 ```
 
@@ -183,7 +193,7 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 ## Todo
 
 ```
-- Add method to control transition time.
+-̶ A̶d̶d̶ m̶e̶t̶h̶o̶d̶ t̶o̶ c̶o̶n̶t̶r̶o̶l̶ t̶r̶a̶n̶s̶i̶t̶i̶o̶n̶ t̶i̶m̶e̶.̶
 - Add magic color effect on cursor move.
 - Add click style effect on cursor click.
 - Add Circle Dot cursor style.
