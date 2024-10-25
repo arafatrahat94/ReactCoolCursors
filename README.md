@@ -2,6 +2,8 @@
 
 A simple npm package for React that offers smooth, customizable cursors.
 
+![Project Logo](./logo.png)
+
 ## Installation
 
 You can install `react-cool-cursors` using npm:
@@ -16,8 +18,9 @@ As `react-cool-cursors` expands, you can easily switch between different cursor 
 
 | Cursor Style | Import Code                                          | Demo Button                                                                                     |
 | ------------ | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| SimpleCursor | `import { SimpleCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1YzL7JMAZRL1RJUr8iI2JRziZeHgVWguA/view?usp=sharing) |
-| FluidCursor  | `import { FluidCursor } from "react-cool-cursors";`  | [View Demo](https://drive.google.com/file/d/1SN6x7TZkIcrk5TYddm3BW0wsIlZtVEtE/view?usp=sharing) |
+| SimpleCursor | `import { SimpleCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1JXR1OweGh_I6XSF22EZul0LcPXe00kmS/view?usp=sharing) |
+| FluidCursor  | `import { FluidCursor } from "react-cool-cursors";`  | [View Demo](https://drive.google.com/file/d/17X7-FLpNIogOKH14jWmfnHLkNiE5zTvP/view?usp=sharing) |
+| PieCursor    | `import { PieCursor } from "react-cool-cursors";`    | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
 
 ### Basic Usage
 
@@ -42,13 +45,14 @@ import "react-cool-cursors/dist/style.css";
 
 You can customize the cursor's appearance using the following attributes:
 
-| Attribute        | Description                                                     | Default Value |
-| ---------------- | --------------------------------------------------------------- | ------------- |
-| `size`           | Set the size of the cursor                                      | `30`          |
-| `color`          | Change the cursor color                                         | `black`       |
-| `opacity`        | Adjust the cursor's opacity                                     | `1`           |
-| `border`         | Set the cursor's border using CSS syntax                        | `none`        |
-| `TransitionTime` | Set the cursor's transition time using number values in seconds | `0.2`         |
+| Attribute          | Description                                                     | Default Value |
+| ------------------ | --------------------------------------------------------------- | ------------- |
+| `size`             | Set the size of the cursor                                      | `30`          |
+| `color`            | Change the cursor color                                         | `black`       |
+| `opacity`          | Adjust the cursor's opacity                                     | `1`           |
+| `border`           | Set the cursor's border using CSS syntax                        | `none`        |
+| `TransitionTime`   | Set the cursor's transition time using number values in seconds | `0.2`         |
+| `InnerBorderColor` | Set the color (its for only pie cursor)                         | `black`       |
 
 ### Example
 
@@ -176,10 +180,14 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Readme Instruction improved.
 - Code optimization done.
 
-### [1.1.4] - 2024-10-25
+### [1.1.4] - 2024-10-24
 - Todo added.
-- Transition time control attribute added.
 - Fluid cursor design improved.
+
+### [2.0.0] - 2024-10-25
+- Transition time control attribute added.
+- Pie Cursor style added.
+- Pie Cursor style code optimization done.
 ```
 
 # Contact Me
@@ -192,8 +200,8 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 
 ## Todo
 
-```
--̶ A̶d̶d̶ m̶e̶t̶h̶o̶d̶ t̶o̶ c̶o̶n̶t̶r̶o̶l̶ t̶r̶a̶n̶s̶i̶t̶i̶o̶n̶ t̶i̶m̶e̶.̶
+- ~~Add method to control transition time~~
+- ~~Add Pie cursor style~~
 - Add magic color effect on cursor move.
 - Add click style effect on cursor click.
 - Add Circle Dot cursor style.
@@ -206,7 +214,6 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Add Ripple effect cursor moving.
 - Add Snake effect cursor moving.
 - Add Packman cursor style.
-```
 
 ## License
 
