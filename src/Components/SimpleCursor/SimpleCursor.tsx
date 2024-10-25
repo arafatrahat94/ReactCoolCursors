@@ -7,6 +7,7 @@ interface SimpleCursorProps {
   color?: string;
   opacity?: number;
   border?: string;
+  TransitionTime?: number;
 }
 
 const Cursor = styled.div<{
@@ -14,6 +15,7 @@ const Cursor = styled.div<{
   color: string;
   opacity: number;
   border: string;
+  TransitionTime: number;
 }>`
   display: block;
   overflow: hidden;
@@ -29,7 +31,7 @@ const Cursor = styled.div<{
   pointer-events: none;
   z-index: 1000;
   border: ${({ border }) => border};
-  transition: all 0.2s ease-out;
+  transition: all ${({ TransitionTime }) => TransitionTime}s ease-out;
   animation: moveCursor1 0.5s infinite alternate;
   opacity: ${({ opacity }) => opacity};
 
@@ -66,6 +68,7 @@ const SimpleCursor: React.FC<SimpleCursorProps> = ({
   color = "black",
   opacity = 1,
   border = "1px solid black",
+  TransitionTime = 0.2,
 }) => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
 
@@ -103,6 +106,7 @@ const SimpleCursor: React.FC<SimpleCursorProps> = ({
       color={color}
       opacity={opacity}
       border={border}
+      TransitionTime={TransitionTime}
     />
   );
 };

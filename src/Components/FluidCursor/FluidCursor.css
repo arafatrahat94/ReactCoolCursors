@@ -23,7 +23,7 @@
   transform-origin: center center;
   pointer-events: none;
   z-index: 1000;
-  transition: all 200ms ease-out;
+
   position: fixed;
 }
 

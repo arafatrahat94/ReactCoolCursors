@@ -6,6 +6,7 @@ interface FluidCursorProps {
   color?: string;
   opacity?: number;
   border?: string;
+  TransitionTime?: number;
 }
 
 const FluidCursor: React.FC<FluidCursorProps> = ({
@@ -13,6 +14,7 @@ const FluidCursor: React.FC<FluidCursorProps> = ({
   color = "black",
   opacity = 1,
   border = "none",
+  TransitionTime = 0.2,
 }) => {
   const TAIL_LENGTH = 20;
   let mouseX = 0;
@@ -59,6 +61,7 @@ const FluidCursor: React.FC<FluidCursorProps> = ({
         cursorCircles[i].style.background = color; // Set color
         cursorCircles[i].style.opacity = opacity.toString();
         cursorCircles[i].style.border = border.toString();
+        cursorCircles[i].style.transition = `all ${TransitionTime}s ease-out`;
       }
       requestAnimationFrame(updateCursor);
     }
