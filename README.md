@@ -16,11 +16,12 @@ npm install react-cool-cursors
 
 As `react-cool-cursors` expands, you can easily switch between different cursor styles. The current options are:
 
-| Cursor Style | Import Code                                          | Demo Button                                                                                     |
-| ------------ | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| SimpleCursor | `import { SimpleCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1JXR1OweGh_I6XSF22EZul0LcPXe00kmS/view?usp=sharing) |
-| FluidCursor  | `import { FluidCursor } from "react-cool-cursors";`  | [View Demo](https://drive.google.com/file/d/17X7-FLpNIogOKH14jWmfnHLkNiE5zTvP/view?usp=sharing) |
-| PieCursor    | `import { PieCursor } from "react-cool-cursors";`    | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
+| Cursor Style  | Import Code                                           | Demo Button                                                                                     |
+| ------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| SimpleCursor  | `import { SimpleCursor } from "react-cool-cursors";`  | [View Demo](https://drive.google.com/file/d/1JXR1OweGh_I6XSF22EZul0LcPXe00kmS/view?usp=sharing) |
+| FluidCursor   | `import { FluidCursor } from "react-cool-cursors";`   | [View Demo](https://drive.google.com/file/d/17X7-FLpNIogOKH14jWmfnHLkNiE5zTvP/view?usp=sharing) |
+| PieCursor     | `import { PieCursor } from "react-cool-cursors";`     | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
+| ElasticCursor | `import { ElasticCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
 
 ### Basic Usage
 
@@ -45,14 +46,15 @@ import "react-cool-cursors/dist/style.css";
 
 You can customize the cursor's appearance using the following attributes:
 
-| Attribute          | Description                                                     | Default Value |
-| ------------------ | --------------------------------------------------------------- | ------------- |
-| `size`             | Set the size of the cursor                                      | `30`          |
-| `color`            | Change the cursor color                                         | `black`       |
-| `opacity`          | Adjust the cursor's opacity                                     | `1`           |
-| `border`           | Set the cursor's border using CSS syntax                        | `none`        |
-| `TransitionTime`   | Set the cursor's transition time using number values in seconds | `0.2`         |
-| `InnerBorderColor` | Set the color (its for only pie cursor)                         | `black`       |
+| Attribute          | Description                                                                          | Default Value                                        |
+| ------------------ | ------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| `size`             | Set the size of the cursor                                                           | `30`                                                 |
+| `color`            | Change the cursor color                                                              | `black`                                              |
+| `opacity`          | Adjust the cursor's opacity                                                          | `1`                                                  |
+| `border`           | Set the cursor's border using CSS syntax                                             | `none`                                               |
+| `TransitionTime`   | Set the cursor's transition time using number values in seconds                      | `0.2`                                                |
+| `InnerBorderColor` | Set the color (its for only pie cursor)                                              | `black`                                              |
+| `Icon`             | pass the icon url or location path for `CustomPngCursor` (only for CustomPngCursor ) | `"https://i.ibb.co.com/ts3cf3j/Untitled-design.png"` |
 
 ### Example
 
@@ -86,8 +88,12 @@ export default App;
 You can disable the default cursor by adding the following css into `index.css` file:
 
 ```
-body{
-  cursor:none
+html,
+body {
+  cursor: none;
+}
+* {
+  cursor: none !important;
 }
 ```
 
@@ -188,6 +194,11 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Transition time control attribute added.
 - Pie Cursor style added.
 - Pie Cursor style code optimization done.
+
+### [3.0.0] - 2024-11-01
+- Elastic Cursor added.
+- Added Custom Image cursor.
+- Fixed Some issues with the pie cursor.
 ```
 
 # Contact Me
@@ -207,13 +218,15 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Add Circle Dot cursor style.
 - Add Emoji cursor style.
 - Add Fire cursor style.
-- Add Custom cursor style.
+- ~~Add Custom cursor style.~~
+- ~~Add Elastic cursor style.~~
 - Add Bubble effect while cursor moving.
 - Add Small dot cursor style.
 - Add Neon cursor style.
 - Add Ripple effect cursor moving.
 - Add Snake effect cursor moving.
 - Add Packman cursor style.
+- Add Donut Cursor Style.
 
 ## License
 
