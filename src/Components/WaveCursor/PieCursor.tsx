@@ -68,6 +68,7 @@ const Cursor = styled.div<{
     left: 4.9em;
     transform-origin: 0.1em 5.1em;
     animation: ${loadAnimation} 1.8s infinite ease;
+    opacity: ${({ opacity }) => opacity};
   }
 
   &.expanded {
