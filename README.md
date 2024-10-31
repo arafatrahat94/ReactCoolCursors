@@ -186,10 +186,14 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Pie Cursor style added.
 - Pie Cursor style code optimization done.
 
-### [3.0.0] - 2024-11-01
+### [2.1.1] - 2024-11-01
 - Elastic Cursor added.
 - Added Custom Image cursor.
 - Fixed Some issues with the pie cursor.
+- Updated readme.
+- Added attribute to control show or hide the default cursor.
+- Code optimization done.
+- New Todo added.
 ```
 
 # Contact Me
