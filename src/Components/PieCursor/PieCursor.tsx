@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled, { keyframes } from "styled-components";
+import HideCursor from "../../Shared/ShowDefaultCursor";
 
 interface PieCursorProps {
   size?: number;
@@ -8,6 +9,7 @@ interface PieCursorProps {
   border?: string;
   InnerBorderColor?: string;
   TransitionTime?: number;
+  hideDefaultCursor?: boolean;
 }
 
 const loadAnimation = keyframes`
@@ -26,6 +28,7 @@ const Cursor = styled.div<{
   border: string;
   InnerBorderColor: string;
   TransitionTime: number;
+  hideDefaultCursor?: boolean;
 }>`
   border-radius: 50%;
   position: fixed;
@@ -83,6 +86,7 @@ const PieCursor: React.FC<PieCursorProps> = ({
   border = "1px solid black",
   TransitionTime = 0.2,
   InnerBorderColor = "black",
+  hideDefaultCursor = true,
 }) => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
 
@@ -114,15 +118,18 @@ const PieCursor: React.FC<PieCursorProps> = ({
   }, [size]);
 
   return (
-    <Cursor
-      ref={cursorRef}
-      size={size}
-      color={color}
-      opacity={opacity}
-      border={border}
-      InnerBorderColor={InnerBorderColor}
-      TransitionTime={TransitionTime}
-    />
+    <>
+      <Cursor
+        ref={cursorRef}
+        size={size}
+        color={color}
+        opacity={opacity}
+        border={border}
+        InnerBorderColor={InnerBorderColor}
+        TransitionTime={TransitionTime}
+      />
+      <HideCursor hideDefaultCursor={hideDefaultCursor} />
+    </>
   );
 };
 

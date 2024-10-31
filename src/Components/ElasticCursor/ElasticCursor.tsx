@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import HideCursor from "../../Shared/ShowDefaultCursor";
 import "./ElasticCursor.css";
 
 interface ElasticCursorProps {
@@ -8,6 +9,7 @@ interface ElasticCursorProps {
   border?: string; // Border of the cursor
   TransitionTime?: number;
   opacity?: number;
+  hideDefaultCursor?: boolean;
 }
 
 const Circle = styled.div<{
@@ -16,6 +18,7 @@ const Circle = styled.div<{
   border: string;
   TransitionTime: number;
   opacity: number;
+  hideDefaultCursor?: boolean;
 }>`
   position: fixed;
   height: ${({ size }) => `${size}px`};
@@ -37,6 +40,7 @@ const ElasticCursor: React.FC<ElasticCursorProps> = ({
   border = "1px solid black",
   TransitionTime = 0.2,
   opacity = 1,
+  hideDefaultCursor = true,
 }) => {
   const circleRef = useRef<HTMLDivElement | null>(null);
   const mouse = useRef({ x: 0, y: 0 });
@@ -98,14 +102,17 @@ const ElasticCursor: React.FC<ElasticCursorProps> = ({
   }, []);
 
   return (
-    <Circle
-      TransitionTime={TransitionTime}
-      ref={circleRef}
-      size={size}
-      opacity={opacity}
-      border={border}
-      color={color}
-    />
+    <>
+      <Circle
+        TransitionTime={TransitionTime}
+        ref={circleRef}
+        size={size}
+        opacity={opacity}
+        border={border}
+        color={color}
+      />
+      <HideCursor hideDefaultCursor={hideDefaultCursor} />
+    </>
   );
 };
 

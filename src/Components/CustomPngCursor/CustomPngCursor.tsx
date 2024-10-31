@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 
 import styled from "styled-components";
+import HideCursor from "../../Shared/ShowDefaultCursor";
 import "./CustomPngCursor.css";
 interface CustomCursorProps {
   size?: number;
@@ -9,6 +10,7 @@ interface CustomCursorProps {
 
   TransitionTime?: number;
   icon?: string;
+  hideDefaultCursor?: boolean;
 }
 
 const Cursor = styled.div<{
@@ -18,6 +20,7 @@ const Cursor = styled.div<{
 
   TransitionTime: number;
   icon?: string;
+  hideDefaultCursor?: boolean;
 }>`
   display: block;
   overflow: hidden;
@@ -58,6 +61,7 @@ const CustomPngCursor: React.FC<CustomCursorProps> = ({
   opacity = 1,
   TransitionTime = 0.2,
   icon = "https://i.ibb.co.com/ts3cf3j/Untitled-design.png",
+  hideDefaultCursor = true,
 }) => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
 
@@ -89,14 +93,17 @@ const CustomPngCursor: React.FC<CustomCursorProps> = ({
   }, [size]);
 
   return (
-    <Cursor
-      ref={cursorRef}
-      size={size}
-      opacity={opacity}
-      TransitionTime={TransitionTime}
-    >
-      {icon ? <img src={icon} alt="Custom Cursor" /> : null}
-    </Cursor>
+    <>
+      <Cursor
+        ref={cursorRef}
+        size={size}
+        opacity={opacity}
+        TransitionTime={TransitionTime}
+      >
+        {icon ? <img src={icon} alt="Custom Cursor" /> : null}
+      </Cursor>
+      <HideCursor hideDefaultCursor={hideDefaultCursor} />
+    </>
   );
 };
 

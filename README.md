@@ -16,12 +16,13 @@ npm install react-cool-cursors
 
 As `react-cool-cursors` expands, you can easily switch between different cursor styles. The current options are:
 
-| Cursor Style  | Import Code                                           | Demo Button                                                                                     |
-| ------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| SimpleCursor  | `import { SimpleCursor } from "react-cool-cursors";`  | [View Demo](https://drive.google.com/file/d/1JXR1OweGh_I6XSF22EZul0LcPXe00kmS/view?usp=sharing) |
-| FluidCursor   | `import { FluidCursor } from "react-cool-cursors";`   | [View Demo](https://drive.google.com/file/d/17X7-FLpNIogOKH14jWmfnHLkNiE5zTvP/view?usp=sharing) |
-| PieCursor     | `import { PieCursor } from "react-cool-cursors";`     | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
-| ElasticCursor | `import { ElasticCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
+| Cursor Style    | Import Code                                             | Demo Button                                                                                     |
+| --------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| SimpleCursor    | `import { SimpleCursor } from "react-cool-cursors";`    | [View Demo](https://drive.google.com/file/d/1JXR1OweGh_I6XSF22EZul0LcPXe00kmS/view?usp=sharing) |
+| FluidCursor     | `import { FluidCursor } from "react-cool-cursors";`     | [View Demo](https://drive.google.com/file/d/17X7-FLpNIogOKH14jWmfnHLkNiE5zTvP/view?usp=sharing) |
+| PieCursor       | `import { PieCursor } from "react-cool-cursors";`       | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
+| ElasticCursor   | `import { ElasticCursor } from "react-cool-cursors";`   | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
+| CustomPngCursor | `import { CustomPngCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
 
 ### Basic Usage
 
@@ -46,15 +47,16 @@ import "react-cool-cursors/dist/style.css";
 
 You can customize the cursor's appearance using the following attributes:
 
-| Attribute          | Description                                                                          | Default Value                                        |
-| ------------------ | ------------------------------------------------------------------------------------ | ---------------------------------------------------- |
-| `size`             | Set the size of the cursor                                                           | `30`                                                 |
-| `color`            | Change the cursor color                                                              | `black`                                              |
-| `opacity`          | Adjust the cursor's opacity                                                          | `1`                                                  |
-| `border`           | Set the cursor's border using CSS syntax                                             | `none`                                               |
-| `TransitionTime`   | Set the cursor's transition time using number values in seconds                      | `0.2`                                                |
-| `InnerBorderColor` | Set the color (its for only pie cursor)                                              | `black`                                              |
-| `Icon`             | pass the icon url or location path for `CustomPngCursor` (only for CustomPngCursor ) | `"https://i.ibb.co.com/ts3cf3j/Untitled-design.png"` |
+| Attribute           | Description                                                                          | Default Value                                        |
+| ------------------- | ------------------------------------------------------------------------------------ | ---------------------------------------------------- |
+| `size`              | Set the size of the cursor                                                           | `30`                                                 |
+| `color`             | Change the cursor color                                                              | `black`                                              |
+| `opacity`           | Adjust the cursor's opacity                                                          | `1`                                                  |
+| `border`            | Set the cursor's border using CSS syntax                                             | `none`                                               |
+| `TransitionTime`    | Set the cursor's transition time using number values in seconds                      | `0.2`                                                |
+| `InnerBorderColor`  | Set the color (its for only pie cursor)                                              | `black`                                              |
+| `Icon`              | pass the icon url or location path for `CustomPngCursor` (only for CustomPngCursor ) | `"https://i.ibb.co.com/ts3cf3j/Untitled-design.png"` |
+| `hideDefaultCursor` | Set `true` to hide default cursor or `false` to show default cursor                  | `true`                                               |
 
 ### Example
 
@@ -69,11 +71,12 @@ const App = () => {
   return (
     <div>
       <SimpleCursor
-        size={30}
-        color="red"
-        opacity={0.5}
-        border="1px dotted blue"
-        TransitionTime={0.5}
+        size={30} ~*control the cursor overall size*~
+        color="red" ~*control or change the bg-color of the cursor*~
+        opacity={0.5} ~*control the opacity of the cursor keep value from (0-1)*~
+        border="1px dotted blue" ~*border styling and adding*~
+        TransitionTime={0.5} ~*control the transition time of cursor overall animation*~
+        hideDefaultCursor={false} ~*false means the default cursor will show*~
       />
       {/* Your other components */}
     </div>
@@ -81,20 +84,6 @@ const App = () => {
 };
 
 export default App;
-```
-
-## Disable default cursor showing
-
-You can disable the default cursor by adding the following css into `index.css` file:
-
-```
-html,
-body {
-  cursor: none;
-}
-* {
-  cursor: none !important;
-}
 ```
 
 ## Changing Cursor Types
@@ -114,6 +103,7 @@ Then use it in your component:
   opacity={1}
   border="1px solid green"
   TransitionTime={0.5}
+  hideDefaultCursor={false}
 />
 ```
 
@@ -128,11 +118,12 @@ const App = () => {
   return (
     <div>
       <SparkleCursor
-        size={35}
-        color="pink"
+        size={30}
+        color="red"
         opacity={1}
-        border="3px dotted purple"
+        border="1px solid green"
         TransitionTime={0.5}
+        hideDefaultCursor={false}
       />
       {/* Your other components */}
     </div>
@@ -211,22 +202,22 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 
 ## Todo
 
-- ~~Add method to control transition time~~
-- ~~Add Pie cursor style~~
+- ~~Add method to control transition time.~~
+- ~~Add Pie cursor style.~~
+- ~~Add attribute to hide default cursor.~~
 - Add magic color effect on cursor move.
 - Add click style effect on cursor click.
-- Add Circle Dot cursor style.
-- Add Emoji cursor style.
+- ~~Add Emoji cursor style-> use CustomPngCursor and pass emoji~~
 - Add Fire cursor style.
 - ~~Add Custom cursor style.~~
 - ~~Add Elastic cursor style.~~
+- Add click effect for Elastic cursor style.
 - Add Bubble effect while cursor moving.
-- Add Small dot cursor style.
 - Add Neon cursor style.
 - Add Ripple effect cursor moving.
 - Add Snake effect cursor moving.
-- Add Packman cursor style.
 - Add Donut Cursor Style.
+- Add click event scale up and opacity reduce
 
 ## License
 

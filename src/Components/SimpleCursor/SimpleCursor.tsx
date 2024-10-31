@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
+import HideCursor from "../../Shared/ShowDefaultCursor";
 import "./SimpleCursor.css";
 
 interface SimpleCursorProps {
@@ -8,6 +9,7 @@ interface SimpleCursorProps {
   opacity?: number;
   border?: string;
   TransitionTime?: number;
+  hideDefaultCursor?: boolean;
 }
 
 const Cursor = styled.div<{
@@ -16,6 +18,7 @@ const Cursor = styled.div<{
   opacity: number;
   border: string;
   TransitionTime: number;
+  hideDefaultCursor?: boolean;
 }>`
   display: block;
   overflow: hidden;
@@ -69,6 +72,7 @@ const SimpleCursor: React.FC<SimpleCursorProps> = ({
   opacity = 1,
   border = "1px solid black",
   TransitionTime = 0.2,
+  hideDefaultCursor = true,
 }) => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
 
@@ -100,14 +104,17 @@ const SimpleCursor: React.FC<SimpleCursorProps> = ({
   }, [size]);
 
   return (
-    <Cursor
-      ref={cursorRef}
-      size={size}
-      color={color}
-      opacity={opacity}
-      border={border}
-      TransitionTime={TransitionTime}
-    />
+    <>
+      <Cursor
+        ref={cursorRef}
+        size={size}
+        color={color}
+        opacity={opacity}
+        border={border}
+        TransitionTime={TransitionTime}
+      />
+      <HideCursor hideDefaultCursor={hideDefaultCursor} />
+    </>
   );
 };
 
