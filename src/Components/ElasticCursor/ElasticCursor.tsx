@@ -29,7 +29,7 @@ const Circle = styled.div<{
   left: calc(${({ size }) => `${size / 2}px`} * -1);
   pointer-events: none;
   background-color: ${({ color }) => color || "transparent"};
-
+  transition: all 0.05s ease;
   z-index: 1000;
   opacity: ${({ opacity }) => opacity};
 `;
@@ -38,7 +38,7 @@ const ElasticCursor: React.FC<ElasticCursorProps> = ({
   size = 40,
   color = "transparent",
   border = "1px solid black",
-  TransitionTime = 0.2,
+  TransitionTime = 0.17,
   opacity = 1,
   hideDefaultCursor = true,
 }) => {

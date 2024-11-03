@@ -16,13 +16,14 @@ npm install react-cool-cursors
 
 As `react-cool-cursors` expands, you can easily switch between different cursor styles. The current options are:
 
-| Cursor Style    | Import Code                                             | Demo Button                                                                                     |
-| --------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| SimpleCursor    | `import { SimpleCursor } from "react-cool-cursors";`    | [View Demo](https://drive.google.com/file/d/1JXR1OweGh_I6XSF22EZul0LcPXe00kmS/view?usp=sharing) |
-| FluidCursor     | `import { FluidCursor } from "react-cool-cursors";`     | [View Demo](https://drive.google.com/file/d/17X7-FLpNIogOKH14jWmfnHLkNiE5zTvP/view?usp=sharing) |
-| PieCursor       | `import { PieCursor } from "react-cool-cursors";`       | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
-| ElasticCursor   | `import { ElasticCursor } from "react-cool-cursors";`   | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
-| CustomPngCursor | `import { CustomPngCursor } from "react-cool-cursors";` | [View Demo](https://drive.google.com/file/d/1a5p-AfK4jGxVX_kmy79J4SwNgpcQplek/view?usp=sharing) |
+| Cursor Style    | Import Code                                             | Demo Button                                                        |
+| --------------- | ------------------------------------------------------- | ------------------------------------------------------------------ |
+| SimpleCursor    | `import { SimpleCursor } from "react-cool-cursors";`    | ![View Demo](./src/Components/SimpleCursor/SimpleCursor.gif)       |
+| FluidCursor     | `import { FluidCursor } from "react-cool-cursors";`     | ![View Demo](./src/Components/FluidCursor/FluidCursor.gif)         |
+| PieCursor       | `import { PieCursor } from "react-cool-cursors";`       | ![View Demo](./src/Components/PieCursor/PieCursor.gif)             |
+| ElasticCursor   | `import { ElasticCursor } from "react-cool-cursors";`   | ![View Demo](./src/Components/ElasticCursor/ELasticCursor.gif)     |
+| DonutCursor     | `import { DonutCursor } from "react-cool-cursors";`     | ![View Demo](./src/Components/DonutCursor/donutCursor.gif)         |
+| CustomPngCursor | `import { CustomPngCursor } from "react-cool-cursors";` | ![View Demo](./src/Components/CustomPngCursor/CustomPngCursor.gif) |
 
 ### Basic Usage
 
@@ -186,7 +187,7 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Pie Cursor style added.
 - Pie Cursor style code optimization done.
 
-### [2.1.1] - 2024-11-01
+### [2.1.1] - 2024-11-04
 - Elastic Cursor added.
 - Added Custom Image cursor.
 - Fixed Some issues with the pie cursor.
@@ -194,6 +195,8 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Added attribute to control show or hide the default cursor.
 - Code optimization done.
 - New Todo added.
+- Added Donut style cursor.
+- Custom Cursor transition time issue solved.
 ```
 
 # Contact Me
@@ -220,7 +223,7 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 - Add Neon cursor style.
 - Add Ripple effect cursor moving.
 - Add Snake effect cursor moving.
-- Add Donut Cursor Style.
+- ~~Add Donut Cursor Style.~~
 - Add click event scale up and opacity reduce
 
 ## License
