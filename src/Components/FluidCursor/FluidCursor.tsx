@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import HideCursor from "../../Shared/ShowDefaultCursor";
 import "./FluidCursor.css";
 
 interface FluidCursorProps {
@@ -7,6 +8,7 @@ interface FluidCursorProps {
   opacity?: number;
   border?: string;
   TransitionTime?: number;
+  hideDefaultCursor?: boolean;
 }
 
 const FluidCursor: React.FC<FluidCursorProps> = ({
@@ -15,6 +17,7 @@ const FluidCursor: React.FC<FluidCursorProps> = ({
   opacity = 1,
   border = "none",
   TransitionTime = 0.2,
+  hideDefaultCursor = true,
 }) => {
   const TAIL_LENGTH = 20;
   let mouseX = 0;
@@ -106,6 +109,7 @@ const FluidCursor: React.FC<FluidCursorProps> = ({
         </defs>
       </svg>
       <div id="waveCursor" />;
+      <HideCursor hideDefaultCursor={hideDefaultCursor} />
     </div>
   );
 };

@@ -1,6 +1,6 @@
 {
   "name": "react-cool-cursors",
-  "version": "2.0.0",
+  "version": "2.1.1",
   "description": "A very simple npm package for react,offering smooth,many customisable cursors.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -86,6 +86,9 @@
     "cursor-based UI",
     "react cursor library",
     "cursor feedback in apps",
-    "react design patterns"
+    "react design patterns",
+    "react cursor",
+    "custom cursor",
+    "animated cursor"
   ]
 }
