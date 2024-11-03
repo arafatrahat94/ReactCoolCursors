@@ -16,14 +16,14 @@ npm install react-cool-cursors
 
 As `react-cool-cursors` expands, you can easily switch between different cursor styles. The current options are:
 
-| Cursor Style    | Import Code                                             | Demo Button                                                        |
-| --------------- | ------------------------------------------------------- | ------------------------------------------------------------------ |
-| SimpleCursor    | `import { SimpleCursor } from "react-cool-cursors";`    | ![View Demo](./src/Components/SimpleCursor/SimpleCursor.gif)       |
-| FluidCursor     | `import { FluidCursor } from "react-cool-cursors";`     | ![View Demo](./src/Components/FluidCursor/FluidCursor.gif)         |
-| PieCursor       | `import { PieCursor } from "react-cool-cursors";`       | ![View Demo](./src/Components/PieCursor/PieCursor.gif)             |
-| ElasticCursor   | `import { ElasticCursor } from "react-cool-cursors";`   | ![View Demo](./src/Components/ElasticCursor/ELasticCursor.gif)     |
-| DonutCursor     | `import { DonutCursor } from "react-cool-cursors";`     | ![View Demo](./src/Components/DonutCursor/donutCursor.gif)         |
-| CustomPngCursor | `import { CustomPngCursor } from "react-cool-cursors";` | ![View Demo](./src/Components/CustomPngCursor/CustomPngCursor.gif) |
+| Cursor Style    | Import Code                                             | Demo Button                                                       |
+| --------------- | ------------------------------------------------------- | ----------------------------------------------------------------- |
+| SimpleCursor    | `import { SimpleCursor } from "react-cool-cursors";`    | [View Demo](./src/Components/SimpleCursor/SimpleCursor.gif)       |
+| FluidCursor     | `import { FluidCursor } from "react-cool-cursors";`     | [View Demo](./src/Components/FluidCursor/FluidCursor.gif)         |
+| PieCursor       | `import { PieCursor } from "react-cool-cursors";`       | [View Demo](./src/Components/PieCursor/PieCursor.gif)             |
+| ElasticCursor   | `import { ElasticCursor } from "react-cool-cursors";`   | [View Demo](./src/Components/ElasticCursor/ELasticCursor.gif)     |
+| DonutCursor     | `import { DonutCursor } from "react-cool-cursors";`     | [View Demo](./src/Components/DonutCursor/donutCursor.gif)         |
+| CustomPngCursor | `import { CustomPngCursor } from "react-cool-cursors";` | [View Demo](./src/Components/CustomPngCursor/CustomPngCursor.gif) |
 
 ### Basic Usage
 
