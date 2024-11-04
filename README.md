@@ -1,8 +1,12 @@
 # ReactCoolCursors
 
+![Version](https://img.shields.io/npm/v/react-cool-cursors.svg)
+
 A simple npm package for React that offers smooth, customizable cursors.
 
 ![Project Logo](./logo.png)
+
+![NPM Downloads](https://img.shields.io/npm/dt/react-cool-cursors.svg) ![Stars](https://img.shields.io/github/stars/arafatrahat94/ReactCoolCursors.svg?style=social)
 
 ## Installation
 
@@ -146,57 +150,78 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 
 ## Changelog
 
-```
-### [Unreleased]
-- Features and improvements are being developed.
+To make your changelog collapsible in Markdown (like on GitHub or similar platforms), you can use HTML details and summary tags. Here’s how you can structure it:
 
-### [1.0.0] - 2024-10-19
-- Initial release of `react-cool-cursors`.
-- Added `SimpleCursor` and `FluidCursor` components.
-- Included basic usage examples in the documentation.
+```markdown
+<details>
+<summary>Changelog (Click to expand)</summary>
 
-### [1.0.1] - 2024-10-19
-- Enhanced cursor animation on click for both cursor types.
-- Fixed issues with cursor position during scaling on click.
-- Improved performance for cursor movement tracking.
+### [2.1.2] - 2024-11-04
 
-### [1.0.4] - 2024-10-19
-- Issue fixed with scroll bar and fluid cursor z index issue too.
-- Fixed issues with the fluid cursor props.
-- Improved performance for cursor movement tracking.
+- Some patch fixes done.
 
-### [1.1.1] - 2024-10-20
-- Switched to typescript method so that it work on both js and ts.
-- Added Border Styling Method.
-- Improved codes for Typescript.
-- Made sure the component works on both typescript and javascript.
+### [2.1.1] - 2024-11-03
 
-### [1.1.2] - 2024-10-20
-- Issue fixed with cursor positioning on fluid cursor.
-
-### [1.1.3] - 2024-10-21
-- Readme Instruction improved.
-- Code optimization done.
-
-### [1.1.4] - 2024-10-24
-- Todo added.
-- Fluid cursor design improved.
-
-### [2.0.0] - 2024-10-25
-- Transition time control attribute added.
-- Pie Cursor style added.
-- Pie Cursor style code optimization done.
-
-### [2.1.1] - 2024-11-04
 - Elastic Cursor added.
 - Added Custom Image cursor.
-- Fixed Some issues with the pie cursor.
-- Updated readme.
+- Fixed some issues with the pie cursor.
+- Updated README.
 - Added attribute to control show or hide the default cursor.
 - Code optimization done.
 - New Todo added.
 - Added Donut style cursor.
 - Custom Cursor transition time issue solved.
+
+### [2.0.0] - 2024-10-25
+
+- Transition time control attribute added.
+- Pie Cursor style added.
+- Pie Cursor style code optimization done.
+
+### [1.1.4] - 2024-10-24
+
+- Todo added.
+- Fluid cursor design improved.
+
+### [1.1.3] - 2024-10-21
+
+- README instruction improved.
+- Code optimization done.
+
+### [1.1.2] - 2024-10-20
+
+- Issue fixed with cursor positioning on fluid cursor.
+
+### [1.1.1] - 2024-10-20
+
+- Switched to TypeScript method so that it works on both JS and TS.
+- Added Border Styling Method.
+- Improved code for TypeScript.
+- Made sure the component works on both TypeScript and JavaScript.
+
+### [1.0.4] - 2024-10-19
+
+- Issue fixed with scroll bar and fluid cursor z-index issue.
+- Fixed issues with the fluid cursor props.
+- Improved performance for cursor movement tracking.
+
+### [1.0.1] - 2024-10-19
+
+- Enhanced cursor animation on click for both cursor types.
+- Fixed issues with cursor position during scaling on click.
+- Improved performance for cursor movement tracking.
+
+### [1.0.0] - 2024-10-19
+
+- Initial release of `react-cool-cursors`.
+- Added `SimpleCursor` and `FluidCursor` components.
+- Included basic usage examples in the documentation.
+
+### [Unreleased]
+
+- Features and improvements are being developed.
+
+</details>
 ```
 
 # Contact Me
