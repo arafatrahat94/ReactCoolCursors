@@ -151,7 +151,11 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 ## Changelog
 
 ```markdown
-### [2.1.1] - 2024-11-04
+### [2.1.2] - 2024-11-04
+
+- Some patch fixes done.
+
+### [2.1.1] - 2024-11-03
 
 - Elastic Cursor added.
 - Added Custom Image cursor.
