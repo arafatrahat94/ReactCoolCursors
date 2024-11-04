@@ -150,17 +150,8 @@ If you are facing any problem, feel free to share [here](https://github.com/araf
 
 ## Changelog
 
-To make your changelog collapsible in Markdown (like on GitHub or similar platforms), you can use HTML details and summary tags. Here’s how you can structure it:
-
 ```markdown
-<details>
-<summary>Changelog (Click to expand)</summary>
-
-### [2.1.2] - 2024-11-04
-
-- Some patch fixes done.
-
-### [2.1.1] - 2024-11-03
+### [2.1.1] - 2024-11-04
 
 - Elastic Cursor added.
 - Added Custom Image cursor.
@@ -220,11 +211,11 @@ To make your changelog collapsible in Markdown (like on GitHub or similar platfo
 ### [Unreleased]
 
 - Features and improvements are being developed.
-
-</details>
 ```
 
-# Contact Me
+This version starts with the most recent changes and works backward to the initial release. Let me know if you need further adjustments!
+
+## Contact Me
 
 ❒ [Gmail](mailto:arafatrahat94@gmail.com) <br>
 ❒ [WhatsApp](https://wa.me/+8801980389400) <br>
